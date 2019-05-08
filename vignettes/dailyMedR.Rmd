@@ -1,0 +1,43 @@
+---
+title: "Using dailyMedR"
+author: "Jayaram Kancherla"
+date:  "`r Sys.Date()`"
+output: BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Dependencies
+
+```{r}
+library(dailyMedR)
+```
+
+## Usage
+
+First, we query for drug records from NLM's Daily Med API. We can search for a drugname by using the `query_daily_med` function
+
+
+```{r}
+res <- query_daily_med("ERBITUX")
+res
+```
+
+## Get drug record Daily Med
+
+Once we have a drug record, we can now query for data for this drug
+
+```{r}
+drug <- res[[1]]
+result <- get_drug_record(drug)
+result
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

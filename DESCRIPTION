@@ -1,0 +1,15 @@
+Package: dailyMedR
+Type: Package
+Title: R package to query from NLM's daily med API
+Version: 0.1.0
+Authors@R: person("Jayaram", "Kancherla", email = "jayaram.kancherla@gmail.com",
+                  role = c("aut", "cre"))
+Description: Search for drug names from US NLM Daily Med API
+Depends: R (>= 3.1.0)
+Imports: httr, XML, rjson
+Suggests: knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
